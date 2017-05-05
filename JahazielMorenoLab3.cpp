@@ -67,7 +67,9 @@ char resp ='s';
                 				matriz[i][j]=nDigitado;
 					}
 				}
-
+			
+				cout<<"Matriz Original"<<endl;
+				cout<<endl;
 				for(int i=0;i<n;i++){
                                         for(int j=0;j<n;j++){
 						cout<<matriz[i][j];
@@ -83,9 +85,9 @@ char resp ='s';
 
  				for(int i = 0; i < n; i++){
    					for(int j = 0; j < n ; j++){
-        					matriz2[j][col] = matriz[i][j];
+        					matriz2[j][columna] = matriz[i][j];
 					}
- 					col--;
+ 					columna--;
 				}
 
 				for(int i=0;i<n;i++){
