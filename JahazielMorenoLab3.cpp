@@ -14,7 +14,7 @@ int **puntero_matriz,nFilas,nCol;
 void mostrarMatrizRecursiva(int **, int, int);
 int Binario(int n);
 int sumaDigitos(int n);
-  
+               
 char resp ='s';
         int option;
         while(resp=='s'||resp=='S'){
