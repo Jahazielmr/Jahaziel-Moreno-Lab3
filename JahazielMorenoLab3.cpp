@@ -10,8 +10,6 @@ using namespace std;
 
 
 int main(){
-int **puntero_matriz,nFilas,nCol;
-void mostrarMatrizRecursiva(int **, int, int);
 int Binario(int n);
 int sumaDigitos(int n);
                
