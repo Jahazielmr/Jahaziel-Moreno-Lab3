@@ -23,9 +23,9 @@ char resp ='s';
                 switch (option){
                         case 1:{
                                 //Primer Ejercicio Numero malvado;
-				int contador=0;
+				int contador= 0;
 				int n=0;
-				int binario=0;
+				int binario= 0;
 				cout<<"Ingrese hasta que n quiere que aparescan sus numeros malvados"<<endl;	
 				cin >> n;				
 					
@@ -117,8 +117,7 @@ char resp ='s';
         }
 
         cout<<"Bye";
-  
-    
+
    return 0;
 } 
 
