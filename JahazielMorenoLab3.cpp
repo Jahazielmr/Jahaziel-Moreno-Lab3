@@ -166,3 +166,7 @@ int Binario(int numero){
 	return binario2;
 
 }
+
+//Lab3 Jahaziel BYE
+
+
