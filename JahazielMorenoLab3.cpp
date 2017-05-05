@@ -2,18 +2,17 @@
 #include<stdio.h>
 #include<string>
 #include<cstdlib>
+#include<stdlib.h>
 
 using namespace std;
 
-int main(){
 
+int main(){
+int **puntero_matriz,nFilas,nCol;
+void mostrarMatrizRecursiva(int **, int, int);
 int Binario(int n);
 int sumaDigitos(int n);
-void pedirDatos();
-int **puntero_matriz,nFilas,nCol;
-void mostrarMatriz(int **, int, int);
-
-   
+  
 char resp ='s';
         int option;
         while(resp=='s'||resp=='S'){
@@ -48,17 +47,56 @@ char resp ='s';
                         }
 
                         case 2:{
-                                //Segundo ejercicio matriz recorsiva con punteros
-					
-				pedirDatos();
-				mostrarMatriz(puntero_matriz, nFilas,nCol);
-        			for(int i=0;i<nFilas;i++){
-           				delete[] puntero_matriz[i];
-
-        			}
-        			delete[];
+                                //Segundo ejercicio matriz recursiva con punteros
 				
-                              	 	
+				int n;
+				cout<<"Digite el numero de matriz n*n: ";
+  				cin>>n;
+				int matriz [n][n];
+				int matriz2[n][n];
+				int columna = n-1;
+				
+
+				//Creando e imprimiendo matriz 1
+  				cout<<"\nDigitando elementos de la matriz: ";
+				int nDigitado;
+  				for(int i=0;i<n;i++){
+        				for(int j=0;j<n;j++){
+                				cout<<"Digite un numero["<<i<<"]["<<j<<"]: ";
+						cin>>nDigitado;
+                				matriz[i][j]=nDigitado;
+					}
+				}
+
+				for(int i=0;i<n;i++){
+                                        for(int j=0;j<n;j++){
+						cout<<matriz[i][j];
+					
+					}
+					cout<<endl;
+				}
+				
+				//Matriz 2
+
+				cout<<endl;	
+				cout<<"La matriz dada vuelta es: "<<endl;
+
+ 				for(int i = 0; i < n; i++){
+   					for(int j = 0; j < n ; j++){
+        					matriz2[j][col] = matriz[i][j];
+					}
+ 					col--;
+				}
+
+				for(int i=0;i<n;i++){
+                                        for(int j=0;j<n;j++){
+                                                cout<<matriz2[i][j];
+
+                                        }
+                                        cout<<endl;
+                                }
+
+				
    			       break;
 
                           }
@@ -68,30 +106,12 @@ char resp ='s';
         }
 
         cout<<"Bye";
-   
+  
+    
    return 0;
 } 
 
-void pedirDatos(){
-	cout<<"Digite el numero de filas: ";	
-	cin<<nFilas;
-  	cout<<"Digite el numero de columnas: ";
-  	cin<<nCol;
 
-  	puntero_matriz = new int*[nFilas];
-  		for(int=0;i<nFilas;i++){
-        		puntero_matriz[i]= new int[nCol];
-  		}
-  		cout<<"\nDigitando elementos de la matriz: ";
-	
-  	for(int i=0;i<nFilas;i++){
-        	for(int j=0;j<nCol;j++){
-                	cout<<"Digite un numero["<<i<<"]["<<j<<"]: ";
-                	cin>>*(*(puntero_matriz+i)+j);
-        	}
-  	}
-
-}
 
 
 
@@ -105,7 +125,6 @@ int sumaDigitos(int n){
 		return ((n%10)+sumaDigitos(n/10));
 
 }
-
 
 
 int Binario(int numero){
