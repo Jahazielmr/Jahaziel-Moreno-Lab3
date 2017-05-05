@@ -60,6 +60,9 @@ char resp ='s';
 				//Creando e imprimiendo matriz 1
   				cout<<"\nDigitando elementos de la matriz: ";
 				int nDigitado;
+				
+				//Rellenando matriz 2;
+				
   				for(int i=0;i<n;i++){
         				for(int j=0;j<n;j++){
                 				cout<<"Digite un numero["<<i<<"]["<<j<<"]: ";
@@ -70,6 +73,9 @@ char resp ='s';
 			
 				cout<<"Matriz Original"<<endl;
 				cout<<endl;
+				
+				//Imprimiendo matriz 2;
+				
 				for(int i=0;i<n;i++){
                                         for(int j=0;j<n;j++){
 						cout<<matriz[i][j];
@@ -83,12 +89,15 @@ char resp ='s';
 				cout<<endl;	
 				cout<<"La matriz dada vuelta es: "<<endl;
 
+				//Rellenando matriz 2
  				for(int i = 0; i < n; i++){
    					for(int j = 0; j < n ; j++){
         					matriz2[j][columna] = matriz[i][j];
 					}
  					columna--;
 				}
+				
+				//imprimiendo matriz 2;
 
 				for(int i=0;i<n;i++){
                                         for(int j=0;j<n;j++){
